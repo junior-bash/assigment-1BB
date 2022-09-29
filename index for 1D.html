@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Bare - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <button type="button" class="btn btn-primary">Add Student</button>
+    <button type="button" class="btn btn-secondary" onClick="window.location.reload()">Refresh Page</button>
+    <table id="myTable" class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Average Mark</th>
+            <th scope="col">Teacher</th>
+            <th scope="col"></th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Thabani</td>
+            <td>30</td>
+            <td>60%</td>
+            <td>Joe Soap</td>
+            <td><td><button class="btn btn-light">Edit</button> <input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Steve Jobs</td>
+            <td>25</td>
+            <td>70%</td>
+            <td>Isaac Newton</td>
+            <td><td><button class="btn btn-light">Edit</button> <input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></td></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td >Bill gates</td>
+            <td>50</td>
+            <td>50%</td>
+            <td>Joe Soap</td>
+            <td> </td>
+            <td><button class="btn btn-light">Edit</button> <input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger"></td>
+          </tr>
+        </tbody>
+        <thead>
+            <tr>
+              <th scope="col">3</th>
+              <th scope="col"></th>
+              <th scope="col">35</th>
+              <th scope="col">60%</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+      </table>
+      <div id="first-tag">
+
+      </div>
+      <div class="secondtag">
+        
+      </div>
+      <div>
+
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script>
+         function delStudent(Stud){
+        var s=Stud.parentNode.parentNode;
+        s.parentNode.removeChild(s);
+    }
+        $(document).ready(function () {
+          console.log('Test')
+        });
+
+
+
+        function UpStud(stud){
+         var rollno=document.sample.rollno.value; 
+        var name=document.sample.name.value; 
+        var s = stud.parentNode.parentNode;
+        var tr = document.createElement('tr');
+        
+        var td1 = tr.appendChild(document.createElement('td'));
+        var td2 = tr.appendChild(document.createElement('td'));
+        var td3 = tr.appendChild(document.createElement('td'));
+        var td4 = tr.appendChild(document.createElement('td'));
+
+
+        document.getElementById("tbl").replaceChild(tr, s);
+    }
+        
+      </script>
+     
+</body>
+
+</html>
